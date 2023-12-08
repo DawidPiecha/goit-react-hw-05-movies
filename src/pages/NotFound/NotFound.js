@@ -1,5 +1,7 @@
+import css from './NotFound.module.css';
+
 const NotFound = () => {
-  return <div>Sorry, page not found</div>;
+  return <div className={css.NotFoundContainer}>Sorry, page not found !</div>;
 };
 
 export { NotFound };

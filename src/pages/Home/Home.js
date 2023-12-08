@@ -22,24 +22,26 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <h1 className={css.HomeHeading}>Trending today</h1>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <ul className={css.HomeList}>
-          {trendingMovies.map(movie => (
-            <Link
-              to={`/movies/${movie.id}`}
-              key={movie.id}
-              className={css.HomeListLink}
-            >
-              <li className={css.HomeListItem}>{movie.title}</li>
-            </Link>
-          ))}
-        </ul>
-      )}
-    </div>
+    <main>
+      <div>
+        <h1 className={css.HomeHeading}>Trending today</h1>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <ul className={css.HomeList}>
+            {trendingMovies.map(movie => (
+              <Link
+                to={`/movies/${movie.id}`}
+                key={movie.id}
+                className={css.HomeListLink}
+              >
+                <li className={css.HomeListItem}>{movie.title}</li>
+              </Link>
+            ))}
+          </ul>
+        )}
+      </div>
+    </main>
   );
 };
 

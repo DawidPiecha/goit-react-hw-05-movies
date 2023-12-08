@@ -1,15 +1,14 @@
-import { MagnifyingGlass } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 import css from './Loader.module.css';
 
 const Loader = () => (
   <div className={css.Loader}>
-    <MagnifyingGlass
+    <RotatingLines
+      strokeColor="#f39014"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="96"
       visible={true}
-      height={280}
-      width={280}
-      ariaLabel="MagnifyingGlass-loading"
-      glassColor="#c0efff"
-      color="#e15b64"
     />
   </div>
 );
