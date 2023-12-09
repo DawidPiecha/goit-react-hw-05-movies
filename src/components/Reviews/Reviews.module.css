@@ -1,0 +1,21 @@
+.ErrorHeading {
+  color: red;
+}
+.ReviewsList {
+  padding: 30px 70px;
+  text-align: justify;
+  list-style-type: none;
+}
+.ListItem {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f39014;
+}
+.ReviewAuthor {
+  color: aliceblue;
+}
+.ReviewRating {
+  color: aliceblue;
+}
+.Review {
+  line-height: 1.35;
+}

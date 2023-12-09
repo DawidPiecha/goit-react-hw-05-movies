@@ -85,7 +85,7 @@ const MovieDetails = () => {
         )}
       </div>
       <div className={css.AdditionalInfo}>
-        <h3>Additional informations</h3>
+        <h2>Additional informations</h2>
         <ul className={css.List}>
           <li>
             <Link to="cast" className={css.Link}>
