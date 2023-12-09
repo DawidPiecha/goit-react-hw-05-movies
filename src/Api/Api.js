@@ -58,7 +58,7 @@ const getMovieCredits = async movieId => {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(response.data.cast);
-      }, 1000);
+      }, 500);
     });
   } catch (error) {
     console.error('getMovieCredits error:', error);
@@ -74,7 +74,7 @@ const getMovieReviews = async movieId => {
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(response.data.results);
-      }, 1000);
+      }, 500);
     });
   } catch (error) {
     console.error('getMovieReviews error:', error);

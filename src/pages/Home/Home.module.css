@@ -1,11 +1,13 @@
 .HomeHeading {
-  width: 250px;
+  max-width: 350px;
   margin: 33px auto;
-
+  padding: 20px;
   text-align: center;
   color: wheat;
-  font-size: 33px;
+  font-size: 43px;
   animation: heartBeat 2.5s infinite;
+  border: 2px solid #f39014;
+  border-radius: 18px;
 }
 @keyframes heartBeat {
   from {
@@ -25,7 +27,7 @@
   }
 }
 .HomeList {
-  margin-top: 45px;
+  margin-top: 25px;
   list-style-type: none;
   display: flex;
   align-items: center;

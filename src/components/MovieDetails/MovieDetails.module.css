@@ -6,6 +6,7 @@
   column-gap: 50px;
   align-items: center;
 }
+
 .Image {
   max-width: 300px;
   border-radius: 18px;
@@ -34,4 +35,21 @@
   column-gap: 10px;
   padding: 0;
   list-style-type: none;
+}
+.AdditionalInfo {
+  margin-top: 45px;
+  color: #f39014;
+  text-align: center;
+}
+.List {
+  list-style-type: none;
+  display: flex;
+  column-gap: 40px;
+  justify-content: center;
+  padding: 0;
+}
+.Link {
+  text-decoration: none;
+  color: #f39014;
+  font-size: 18px;
 }

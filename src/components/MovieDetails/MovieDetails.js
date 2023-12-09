@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 import { getMovieDetails } from 'Api/Api';
 import { Loader } from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
@@ -16,7 +17,7 @@ const MovieDetails = () => {
         setMovieData(details);
         // console.log(details);
       } catch (error) {
-        console.error('Wystąpił błąd podczas pobierania danych filmu:', error);
+        console.error('FetchingMovieData error:', error);
       } finally {
         setIsLoading(false);
       }
@@ -48,7 +49,11 @@ const MovieDetails = () => {
             <div>
               <img
                 className={css.Image}
-                src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`}
+                src={
+                  movieData.poster_path
+                    ? `https://image.tmdb.org/t/p/w500${movieData.poster_path}`
+                    : 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg'
+                }
                 alt={movieData.title}
               />
             </div>
@@ -78,6 +83,22 @@ const MovieDetails = () => {
             </div>
           </div>
         )}
+      </div>
+      <div className={css.AdditionalInfo}>
+        <h3>Additional informations</h3>
+        <ul className={css.List}>
+          <li>
+            <Link to="cast" className={css.Link}>
+              Cast
+            </Link>
+          </li>
+          <li>
+            <Link to="reviews" className={css.Link}>
+              Reviews
+            </Link>
+          </li>
+        </ul>
+        <Outlet />
       </div>
     </main>
   );
