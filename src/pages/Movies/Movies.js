@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
+// import { useSearchParams } from 'react-router-dom';
 import { searchMovies } from 'Api/Api';
 import { Searchbar } from 'components/SearchBar/SearchBar';
 import Notiflix from 'notiflix';
 import { MoviesList } from 'components/MoviesList/MoviesList';
-
 import { Loader } from 'components/Loader/Loader';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
   const [query, setQuery] = useState('');
 
   useEffect(() => {

@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './SearchBarm.module.css';
 
 const Searchbar = ({ onSubmit }) => {
-  const [query, setQuery] = useState('');
+  const [urlSearchParams, setUrlSearchParams] = useSearchParams();
+  const urlQuery = urlSearchParams.get('query');
+  const [query, setQuery] = useState(urlQuery || '');
 
   const handleInputChange = event => {
     setQuery(event.target.value);
@@ -13,6 +16,7 @@ const Searchbar = ({ onSubmit }) => {
     event.preventDefault();
 
     onSubmit(query);
+    setUrlSearchParams({ query: query });
     setQuery(''); // Czyszczenie pola wyszukiwania po wysłaniu formularza. Input znów jest pusty.
   };
 

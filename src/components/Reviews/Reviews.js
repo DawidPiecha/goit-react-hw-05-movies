@@ -14,7 +14,7 @@ const Reviews = () => {
       try {
         const details = await getMovieReviews(movieId);
         setMovieReviews(details);
-        console.log(details);
+        // console.log(details);
       } catch (error) {
         console.error('Wystąpił błąd podczas pobierania danych filmu:', error);
       } finally {
