@@ -2,7 +2,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { getMovieDetails } from 'Api/Api';
-import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
@@ -116,4 +116,4 @@ const MovieDetails = () => {
     </main>
   );
 };
-export { MovieDetails };
+export default MovieDetails;

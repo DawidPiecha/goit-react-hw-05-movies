@@ -4,4 +4,4 @@ const NotFound = () => {
   return <div className={css.NotFoundContainer}>Sorry, page not found !</div>;
 };
 
-export { NotFound };
+export default NotFound;

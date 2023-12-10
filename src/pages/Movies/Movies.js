@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
 import { searchMovies } from 'Api/Api';
-import { Searchbar } from 'components/SearchBar/SearchBar';
+import Searchbar from 'components/SearchBar/SearchBar';
 import Notiflix from 'notiflix';
-import { MoviesList } from 'components/MoviesList/MoviesList';
-import { Loader } from 'components/Loader/Loader';
+import MoviesList from 'components/MoviesList/MoviesList';
+import Loader from 'components/Loader/Loader';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -52,4 +52,4 @@ const Movies = () => {
     </main>
   );
 };
-export { Movies };
+export default Movies;

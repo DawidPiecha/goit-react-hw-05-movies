@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieReviews } from 'Api/Api';
-import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import css from './Reviews.module.css';
 
 const Reviews = () => {
@@ -64,4 +64,4 @@ Reviews.propTypes = {
   movieId: PropTypes.string.isRequired,
 };
 
-export { Reviews };
+export default Reviews;

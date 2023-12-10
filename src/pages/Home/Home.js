@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getTrending } from 'Api/Api';
-import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import css from './Home.module.css';
 
 const Home = () => {
@@ -45,4 +45,4 @@ const Home = () => {
   );
 };
 
-export { Home };
+export default Home;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMovieCredits } from 'Api/Api';
-import { Loader } from 'components/Loader/Loader';
+import Loader from 'components/Loader/Loader';
 import css from './Cast.module.css';
 
 const Cast = () => {
@@ -73,4 +73,4 @@ const Cast = () => {
   );
 };
 
-export { Cast };
+export default Cast;

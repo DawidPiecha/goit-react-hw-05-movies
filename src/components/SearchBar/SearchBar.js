@@ -46,4 +46,4 @@ Searchbar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-export { Searchbar };
+export default Searchbar;
