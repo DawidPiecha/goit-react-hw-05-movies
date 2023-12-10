@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { useSearchParams } from 'react-router-dom';
+
 import { searchMovies } from 'Api/Api';
 import { Searchbar } from 'components/SearchBar/SearchBar';
 import Notiflix from 'notiflix';

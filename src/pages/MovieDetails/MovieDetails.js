@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { getMovieDetails } from 'Api/Api';
@@ -9,6 +9,9 @@ const MovieDetails = () => {
   const { movieId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   const [movieData, setMovieData] = useState(null);
+
+  const location = useLocation();
+  const backLink = location.state?.from ?? '/';
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -33,7 +36,12 @@ const MovieDetails = () => {
           {isLoading ? (
             <Loader />
           ) : (
-            <h1 className={css.ErrorHeading}>Movie not found</h1>
+            <div>
+              <Link to={backLink} className={css.backLink}>
+                Go back
+              </Link>
+              <h1 className={css.ErrorHeading}>Movie not found</h1>
+            </div>
           )}
         </div>
       </main>
@@ -46,6 +54,11 @@ const MovieDetails = () => {
           <Loader />
         ) : (
           <div className={css.Wrapper}>
+            <div>
+              <Link to={backLink} className={css.backLink}>
+                Go back
+              </Link>
+            </div>
             <div>
               <img
                 className={css.Image}

@@ -60,3 +60,15 @@
   color: white;
   font-size: 18px;
 }
+
+.backLink {
+  display: flex;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #f39014;
+  border: 2px solid #f39014;
+  border-radius: 18px;
+}
