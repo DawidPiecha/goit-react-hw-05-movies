@@ -35,7 +35,17 @@ const Home = () => {
                 key={movie.id}
                 className={css.HomeListLink}
               >
-                <li className={css.HomeListItem}>{movie.title}</li>
+                <li className={css.HomeListItem}>
+                  <img
+                    className={css.HomeListImage}
+                    src={
+                      movie.poster_path
+                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                        : 'https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg'
+                    }
+                    alt={movie.title}
+                  />
+                </li>
               </Link>
             ))}
           </ul>

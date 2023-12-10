@@ -1,6 +1,6 @@
 .HomeHeading {
   max-width: 350px;
-  margin: 33px auto;
+  margin: 20px auto;
   padding: 20px;
   text-align: center;
   color: wheat;
@@ -27,23 +27,29 @@
   }
 }
 .HomeList {
-  margin-top: 25px;
   list-style-type: none;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  row-gap: 10px;
-  padding: 0;
-  font-size: 22px;
-  font-weight: 500;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px;
 }
 .HomeListItem {
   transition: transform 200ms ease-in-out;
   color: #f39014;
 }
+
 .HomeListItem:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
+
 .HomeListLink {
   text-decoration: none;
+}
+.HomeListImage {
+  max-width: 150px;
+  border-radius: 18px;
+  box-shadow: 0px 0px 30px #f39014;
 }
