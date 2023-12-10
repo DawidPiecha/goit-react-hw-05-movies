@@ -20,15 +20,15 @@ const getTrending = async () => {
 };
 
 // Funkcja do wyszukiwania filmu po słowie kluczowym
-const searchMovies = async keyword => {
+const searchMovies = async query => {
   try {
     const response = await axios.get(
-      `search/movie?api_key=${API_KEY}&query=${keyword}`
+      `search/movie?api_key=${API_KEY}&query=${query}`
     );
     return new Promise(resolve => {
       setTimeout(() => {
         resolve(response.data.results);
-      }, 1000);
+      }, 500);
     });
   } catch (error) {
     console.log('searchMovies error:', error);

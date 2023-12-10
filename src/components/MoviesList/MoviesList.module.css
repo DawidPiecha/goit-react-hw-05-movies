@@ -1,0 +1,26 @@
+.ErrorHeading {
+  padding: 24px 12px;
+  text-align: center;
+  color: red;
+}
+.MovieList {
+  margin-top: 25px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+.MovieListItem {
+  transition: transform 200ms ease-in-out;
+}
+.MovieListItem:hover {
+  transform: scale(1.2);
+}
+.MovieListLink {
+  color: #f39014;
+  text-decoration: none;
+}
